@@ -1,0 +1,63 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+h1{
+  font-family: "Cherry Bomb One", sans-serif;
+  color: rgb(177, 137, 86);
+}
+
+
+
+/* DESIGN */
+.container {
+  
+}
+.bunnyAnim{
+  position: relative;
+  height: auto;
+}
+
+.bunnyAnim img{
+  width: 100px;
+}
+
+.bunny1, .bunny2 {
+  position: absolute;
+}
+
+.bunny1 {
+  animation: flashAnim1 2s linear 0s infinite;
+}
+
+.bunny2 {
+  animation: flashAnim2 2s linear 0s infinite;
+  transform: translate(1rem, -1rem) rotate(10deg);
+}
+
+@keyframes flashAnim1 {
+  0%, 49%{
+    opacity: 1;
+  }
+  50%, 100%{
+    opacity: 0;
+  }
+}
+
+@keyframes flashAnim2 {
+  0%, 49%{
+    opacity: 0;
+  }
+  50%, 100%{
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: "Cherry Bomb One";
+  src: url(assets/Cherry_Bomb_One_Font/CherryBombOne-Regular.ttf);
+}
