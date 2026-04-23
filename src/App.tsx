@@ -43,7 +43,6 @@ function App() {
     const totSeconds = time / 100;
     const minutes = Math.floor(totSeconds / 60);
     const seconds = Math.floor(totSeconds % 60);
-    console.log(seconds);
     if (seconds > 9) {
       return `${minutes}:${seconds}`;
     }
