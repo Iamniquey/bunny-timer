@@ -1,0 +1,178 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  --color1: rgb(178, 139, 87);
+  --color2: rgb(228, 209, 184);
+  --color3: rgb(253, 248, 221);
+  --color4: rgb(143, 110, 66);
+}
+
+body {
+  background-color: var(--color2);
+  color: var(--color1);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: "Cherry Bomb One", sans-serif;
+}
+
+.timeline {
+  position: absolute;
+  left: 20px;
+  top: 83px;
+  z-index: -1;
+  width: calc((100% - 130px));
+  height: 1px;
+  border-top: 4px dotted var(--color1);
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  height: 200px;
+  border: 3px var(--color1) dotted;
+  text-align: center;
+  margin: 5px auto;
+}
+
+.bunny-line-area {
+  position: relative;
+  width: 100%;
+}
+
+.form-inp {
+  width: 50px;
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid var(--color1);
+  border-radius: 10px;
+  color: var(--color4);
+}
+
+.form-inp:disabled {
+  cursor: not-allowed;
+  background-color: var(--color2);
+}
+
+.btn {
+  padding: 10px;
+  background-color: var(--color3);
+  border: 2px solid var(--color1);
+  border-radius: 10px;
+  margin: 0 5px;
+  color: var(--color4);
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: var(--color2);
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: var(--color3);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: var(--color2);
+}
+
+.bunnyAnim {
+  position: relative;
+}
+
+.bunnyAnim img {
+  width: 100px;
+  height: auto;
+}
+
+.bunny,
+.bunny1,
+.bunny2,
+.carrot1,
+.carrot2 {
+  position: absolute;
+  top: 57px;
+}
+
+.carrot1 img,
+.carrot2 img {
+  width: 70px;
+  transform: scaleX(-1);
+}
+
+.carrot1,
+.carrot2 {
+  left: calc(100% - 80px);
+}
+
+.carrot2 {
+  animation: rotateAnim 1s linear 0s infinite;
+}
+
+@keyframes rotateAnim {
+  0%,
+  49% {
+    transform: rotate(0deg);
+  }
+  50%,
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+.bunny1 {
+  animation: flashAnim1 1s linear 0s infinite;
+}
+
+.bunny2 {
+  animation: flashAnim2 1s linear 0s infinite;
+  transform: translate(1rem, -1rem) rotate(10deg);
+}
+
+@keyframes flashAnim1 {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flashAnim2 {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.form-area {
+  margin-top: 8px;
+}
+
+.clock {
+  display: inline-block;
+  margin-left: 8px;
+  min-width: 54px;
+  color: var(--color4);
+  font-weight: 700;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@font-face {
+  font-family: "Cherry Bomb One";
+  src: url(../assets/Cherry_Bomb_One_Font/CherryBombOne-Regular.ttf);
+}

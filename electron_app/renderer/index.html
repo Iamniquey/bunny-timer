@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bunny Timer (Electron)</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Bunny Timer</h1>
+      <section id="scene"></section>
+
+      <form id="controls" class="form-area">
+        <button id="startBtn" class="btn" type="button">Start</button>
+        <button id="pauseBtn" class="btn hidden" type="button">Pause</button>
+        <input id="minutesInput" class="form-inp" type="number" min="0" value="0" />
+        <span id="minutesLabel">min</span>
+        <input id="secondsInput" class="form-inp" type="number" min="0" max="59" value="10" />
+        <span id="secondsLabel">sec</span>
+        <button id="resetBtn" class="btn" type="button">Reset</button>
+        <div id="clock" class="clock hidden">0:00</div>
+      </form>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
